@@ -57,12 +57,20 @@ class _DicePageState extends State<DicePage> {
         Container(
           child: Align(
               alignment: Alignment(0, 0.5),
-              child: Text(
-                "You Rolled $totalDiceNumber",
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25),
+              child: '$totalDiceNumber' == '0'
+                  ? Text(
+                      "Feeling Lucky? Roll the Dice!",
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25),
+                    )
+                  : Text(
+                      "You Rolled $totalDiceNumber",
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25),
               )),
         ),
         Container(
